@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.scss';
+import LeftMenu from './containers/LeftMenu/LeftMenu';
 
 function App() {
   return (
-    <h2>lets begin !!!</h2>
+    <LeftMenu />
   );
 }
 
