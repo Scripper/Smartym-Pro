@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.scss';
-import LeftMenu from './containers/LeftMenu/LeftMenu';
+import HomePage from './pages/HomePaga';
 
 function App() {
   return (
-    <LeftMenu />
+    <HomePage/>
   );
 }
 
