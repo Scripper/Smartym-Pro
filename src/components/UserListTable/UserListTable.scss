@@ -1,0 +1,36 @@
+.table-container {
+    margin: 2.7rem 2.5rem 1rem 2.5rem;
+}
+
+.user-list__table {
+    width: 100%;
+    border: 1px solid #e3e3e9;
+    thead {
+        background-color: #fff;
+        color: #feb31c;
+        th {
+            padding: 1.6rem 1rem 1.7rem 2.1rem;
+            font-weight: normal;
+            text-align: left;
+        }
+    }
+    tbody {
+        font-size: 1.6rem;
+        td {
+            padding: 1.6rem 0 1.7rem 2.1rem;
+            font-weight: normal;
+            text-align: left;
+            font-weight: 600;
+            padding: 3.3rem 1.5rem 3rem 2rem;
+            span {
+                font-weight: 300;
+            }
+        }
+        tr {
+            background-color: #fcfcfc;
+            &:nth-child(2n) {
+                background-color: #fff;
+            }
+        }
+    }
+}
