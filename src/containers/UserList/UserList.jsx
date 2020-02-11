@@ -10,7 +10,7 @@ const UserList = () => {
         <main className="user-list">
             <UserListTable/>
             <div className="button-table">
-                <Button value="show more" className="btn-w100"/>
+                <Button value="show more" className="btn-table"/>
             </div>
         </main>
     )

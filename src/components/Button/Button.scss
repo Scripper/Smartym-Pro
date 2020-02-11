@@ -2,18 +2,24 @@
 
 .btn {
     color: $button-text-color;
-    border: 1px solid #c59b46;
-    color: $button-text-color;
-    padding: 1.1rem 1.2rem 1rem;
     background-color: #fff;
     border-radius: 0.5rem;
-    font-size: 1.4rem;
     box-sizing: border-box;
-    margin-right: 3.5rem;
+    text-transform: uppercase;
     &:focus {
         outline: none;
     }  
 }
-.btn-w100 {
+
+.btn-header {
+    font-size: 1.4rem;
+    padding: 1.1rem 1.2rem 1rem;
+    border: 1px solid #c59b46;
+}
+
+.btn-table { 
     width: 100%;
+    border: 1px solid #e3e3e9;
+    font-size: 1.2rem;
+    height: 6rem;
 }
