@@ -1,6 +1,5 @@
 import React from 'react';
 import './Menu.scss';
-import Logo from '../Logo/Logo';
 
 
 const data = [
@@ -39,11 +38,11 @@ const data = [
 
 const Menu = () => {
 
-    const movieItems = data.map((item, index) => {
+    const menuItems = data.map((item, index) => {
             if(item.active) {
                 return (
                     <li key={index} className='active'>
-                        <a href="#">
+                        <a href="/">
                             {item.svg}
                             <span>{item.name}</span>
                         </a>
@@ -52,7 +51,7 @@ const Menu = () => {
             } else {
                 return (
                     <li key={index}>
-                        <a href="#">
+                        <a href="/">
                             {item.svg}
                             <span>{item.name}</span>
                         </a>
@@ -64,7 +63,7 @@ const Menu = () => {
     return(
         <nav className='menu-list-items'>
             <ul>
-                { movieItems }
+                { menuItems }
             </ul>
         </nav>
     )
