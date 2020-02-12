@@ -1,0 +1,23 @@
+.input-base {
+    color: #242430;
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    border-radius: 1rem;
+    &::placeholder {
+        color: #242430;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.input-header {
+    border: 2px solid #feca61;
+    padding: 1rem 0 1rem 4.3rem;
+    width: 28rem;
+    background-color: #feca61;
+    &:focus {
+        border: 2px solid darken($color: #feb31c, $amount: 5);
+    }
+}

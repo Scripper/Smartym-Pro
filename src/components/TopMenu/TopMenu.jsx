@@ -34,7 +34,7 @@ class TopMenu extends Component {
                 <div className="middle-composition">
                     <div className="top-menu__search">
                         <div className="search-icon"><img src={search} alt=""/></div>
-                        <Input className="input-header" onChange={this.handleChange}/>
+                        <Input className="input-header" placeholder="Search" onChange={this.handleChange}/>
                     </div>
                 </div>
                 <div className="right-composition">
