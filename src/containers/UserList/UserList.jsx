@@ -7,10 +7,13 @@ import Button from '../../components/Button/Button';
 import { connect } from "react-redux";
 import { SEARCH_USER } from "../../redux/actions/actions";
 
+import fakeData from '../../data/data';
+
 class UserList extends Component {
 
     render() {
         console.log(this.props)
+        console.log(fakeData)
         let number = this.props.searchValue + 10
         return (
             <main className="user-list">
