@@ -1,6 +1,6 @@
 let fakeData = [];
 
-for(let i=1; i < 21; i++) {
+for(let i=1; i < 50; i++) {
     let newUser = {
         id: i,
         email: `leffler.karelle${i}@marcellus.net`,

@@ -2,7 +2,21 @@ import React from 'react';
 import './UserListTable.scss';
 
 
-const UserListTable = () => {
+const UserListTable = (props) => {
+    const { data } = props;
+    const userList = data.map(item => {
+        return (
+        <tr key={item.id}>
+            <td>{item.email}</td>
+            <td>{item.firstName} <span>{item.lastName}</span></td>
+            <td><span>{item.type}</span></td>
+            <td><span>{item.company}</span></td>
+            <td><span>{item.country}</span></td>
+            <td>{item.subscriptionDate}</td>
+        </tr>
+        )
+    });
+    
     return (
         <div className="table-container">
             <table className="user-list__table">
@@ -17,22 +31,7 @@ const UserListTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>leffler.karelle@marcellus.net</td>
-                        <td>Lewis <span>Taylor</span></td>
-                        <td><span>Business</span></td>
-                        <td><span>green</span></td>
-                        <td><span>Korea</span></td>
-                        <td>11/02/2016</td>
-                    </tr>
-                    <tr>
-                        <td>leffler.karelle@marcellus.net</td>
-                        <td>Lewis <span>Taylor</span></td>
-                        <td><span>Business</span></td>
-                        <td><span>green</span></td>
-                        <td><span>Korea</span></td>
-                        <td>11/02/2016</td>
-                    </tr>
+                    { userList }
                 </tbody>
             </table>
         </div>
