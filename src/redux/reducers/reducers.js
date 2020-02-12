@@ -1,5 +1,7 @@
+import fakeData from '../../data/data';
+
 const initialStore = {
-    userList: [],
+    userList: fakeData,
     searchValue: 10,
     userAmount: 0,
 };
