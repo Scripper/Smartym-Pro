@@ -36,7 +36,6 @@ const UserListTable = (props) => {
     const displayContent = !data.length ? <NothingFound/> : table;
     
     return (
-        
         <div className="table-container">
             { displayContent }
         </div>

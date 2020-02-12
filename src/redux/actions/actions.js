@@ -4,3 +4,11 @@ export const SEARCH_USER = (setSearchValue) => {
         payload: setSearchValue
     }
 };
+
+
+export const USER_AMOUNT = (amount) => {
+    return {
+        type: "USER_AMOUNT",
+        payload: amount
+    }
+};

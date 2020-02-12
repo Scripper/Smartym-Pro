@@ -32,26 +32,6 @@
     .middle-composition {
         .top-menu__search {
             position: relative;
-            input {
-                color: #242430;
-                font-size: 1.4rem;
-                font-family: 'Open Sans', sans-serif;
-                width: 28rem;
-                height: 3.9rem;
-                background-color: #feca61;
-                border: none;
-                padding: 1rem 0 1rem 4.3rem;
-                border-radius: 1rem;
-                border: 2px solid #feca61;
-                
-                &::placeholder {
-                    color: #242430;
-                }
-                &:focus {
-                    border: 2px solid darken($color: #feb31c, $amount: 5);
-                    outline: none;
-                }
-            }
             .search-icon {
                 position: absolute;
                 left: 5%;

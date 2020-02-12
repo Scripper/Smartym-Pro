@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './TopMenu.scss'
-import search from './search.png'
+import search from './search.png';
+import Input from '../Input/Input';
 
 
 //РАЗИБТЬ НА КОМПОНЕНТЫ !!!
@@ -27,13 +28,13 @@ class TopMenu extends Component {
                     </div>
                     <div className="user-list__info">
                         <span className="user-list__title">Users List</span>
-                        <span className="user-amount">874 users</span>
+                        <span className="user-amount">{this.props.userAmount} users</span>
                     </div>
                 </div>
                 <div className="middle-composition">
                     <div className="top-menu__search">
                         <div className="search-icon"><img src={search} alt=""/></div>
-                        <input type="search" placeholder="Search" onChange={this.handleChange}/>
+                        <Input className="input-header" onChange={this.handleChange}/>
                     </div>
                 </div>
                 <div className="right-composition">

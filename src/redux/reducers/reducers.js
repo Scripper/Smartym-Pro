@@ -2,7 +2,7 @@ import fakeData from '../../data/data';
 
 const initialStore = {
     userList: fakeData,
-    searchValue: 'karel',
+    searchValue: '',
     userAmount: 0,
 };
 
@@ -10,6 +10,9 @@ const reducer = (state = initialStore, action) => {
     switch (action.type) {
         case 'SEARCH_USER':
             return { ...state, searchValue: action.payload };
+
+        case 'USER_AMOUNT':
+            return { ...state, userAmount: action.payload };    
        
         default:
             return state;
