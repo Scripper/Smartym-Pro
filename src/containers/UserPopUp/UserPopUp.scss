@@ -1,10 +1,39 @@
-.modal-container {
-    display: none;
+.modal-main-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     min-height: 100%;
     z-index: 100;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal {
+        max-width: 60%;
+    }
+    .container {
+        display: flex;
+    }
+    .modal-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .w50 {
+        width: 50%;
+    }
+    .w25 {
+        width: 25%;
+    }
+    .modal-header {
+        background-color: #ffffff;
+    }
+    .modal-body {
+        background-color: #f4f4f4;
+        padding: 2.5rem;
+    }
+    .modal-footer {
+        background-color: #f4f4f4;
+        padding: 2.5rem;
+    }
 }

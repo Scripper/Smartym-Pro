@@ -7,15 +7,17 @@ import UserPopUp from '../containers/UserPopUp/UserPopUp';
 
 const HomePage = () => {
     return (
-        
+        <>
+        <UserPopUp/>
         <div className='page-container'>
-            <UserPopUp/>
+            
             <LeftMenu/>
             <div className="main-container">
                 <Header/>
                 <UserList/>
             </div>
         </div>
+        </>
     )
 }
 

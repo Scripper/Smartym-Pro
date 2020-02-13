@@ -18,7 +18,7 @@ class UserList extends Component {
             reg = RegExp(`${searchValue.toLowerCase()}`);
             result = initData.filter(item => {
                 if(item.email.toLowerCase().search(reg) >= 0) {
-                    return item
+                    return true
                 }
             })
         } else {
