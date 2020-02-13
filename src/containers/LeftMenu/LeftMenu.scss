@@ -1,0 +1,14 @@
+@import '../../scss/vars.scss';
+
+.left-menu {
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $menu-color;
+    .left-menu__logo {
+        background-color: #4d9db8;
+        padding-left: 1.6rem;
+        min-height: 9.9rem;
+        display: flex;
+    }
+}

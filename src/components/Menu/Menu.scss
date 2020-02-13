@@ -1,0 +1,57 @@
+nav.menu-list-items {
+    height: 100%;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.4rem;
+        li {
+            padding: 2rem;
+            position: relative;
+            span {
+                color: #bddbe4;
+                text-transform: uppercase;
+                transition: 0.3s ease;
+                margin: 0.5rem 0 0 2.5rem;
+            }
+            &:hover span{
+                color: #fff;
+            }
+            &:hover svg {
+                fill: #ffffff;
+            }
+        }
+        a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        li.active {
+            &:before {
+                content: '';
+                width: 0.3rem;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #fff;
+            }
+            span {
+                color: #fff;
+            }
+            svg {
+                fill: #ffffff;
+            }
+        }
+
+    }
+}
+
+svg {
+    transition: 0.3s ease;
+    fill: #bddbe4;
+    &:hover {
+        fill: #ffffff;
+    }
+}

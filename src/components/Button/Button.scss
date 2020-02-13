@@ -1,0 +1,43 @@
+@import '../../scss/vars.scss';
+
+.btn {
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }  
+}
+
+.btn-header {
+    font-size: 1.4rem;
+    padding: 1.1rem 1.2rem 1rem;
+    border: 1px solid #c59b46;
+    color: $button-text-color;
+    background-color: #fff;
+}
+
+.btn-table { 
+    width: 100%;
+    border: 1px solid #e3e3e9;
+    font-size: 1.2rem;
+    height: 6rem;
+    margin-bottom: 1.5rem;
+    color: $button-text-color;
+    background-color: #fff;
+}
+.btn-gray {
+    background-color: #c8c8c8;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 1.3rem 1rem;
+    border: 1px solid #838383;
+}
+.btn-green {
+    background-color: #68c67c;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 1.3rem 3.4rem;
+    border: 1px solid #61a970;
+}
