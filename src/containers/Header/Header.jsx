@@ -11,14 +11,13 @@ const Header = (props) => {
         
     }
     
-
     return (
-        <TopMenu getValue={getValue}/>
+        <TopMenu getValue={getValue} userAmount={props.userAmount}/>
     )
 };
 
 const mapStateToProps = state => {
-    return { searchValue: state.searchValue }
+    return { searchValue: state.searchValue, userAmount: state.userAmount }
 };
 
 const mapDispatchToProps = (dispatch) => {

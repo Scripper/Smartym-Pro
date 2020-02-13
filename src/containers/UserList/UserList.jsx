@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import './UserList.scss';
-
 import UserListTable from '../../components/UserListTable/UserListTable';
 import Button from '../../components/Button/Button';
-
 import { connect } from "react-redux";
-import { SEARCH_USER } from "../../redux/actions/actions";
-
+import { USER_AMOUNT, USER_ID } from "../../redux/actions/actions";
 
 
 class UserList extends Component {
@@ -15,47 +12,51 @@ class UserList extends Component {
         let initData = this.props.userList;
         let searchValue = this.props.searchValue;
         let result;
-        let reg = RegExp(`${searchValue}`);
+        let reg;
         
-
         if(this.props.searchValue !== undefined) {
-            searchValue.toLowerCase();
-            console.log(searchValue)
+            reg = RegExp(`${searchValue.toLowerCase()}`);
             result = initData.filter(item => {
                 if(item.email.toLowerCase().search(reg) >= 0) {
                     return true
                 }
+                return false
             })
         } else {
             result = initData;
         }
+        this.props.setUserAmount(result.length)
         return result
         
     }
 
+    userId = (id) => {
+        this.props.setUserId(id)
+    }
+
     render() {
-        let number = this.props.searchValue + 10;
         const data = this.getSortData();
         return (
             <main className="user-list">
                 <UserListTable
                     data={data}
+                    userId={this.userId}
                 />
                 <div className="button-table">
-                    <Button value="show more" className="btn-table" onClick={() => this.props.setSearchValue(number)}/>
+                    {data.length > 10 ? <Button value="show more" className="btn-table"/> : null}
                 </div>
             </main>
         )
     }
 }
 
-
 const mapStateToProps = state => {
-    return { userList: state.userList, searchValue: state.searchValue }
+    return { userList: state.userList, searchValue: state.searchValue, userAmount: state.userAmount }
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return { setSearchValue: (data) => dispatch(SEARCH_USER(data)) }
+    return { setUserAmount: (data) => dispatch(USER_AMOUNT(data)),
+             setUserId: (data) => dispatch(USER_ID(data)) }
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserList);

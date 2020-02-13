@@ -1,6 +1,7 @@
 .page-container {
     display: flex;
     min-height: 100vh;
+    position: relative;
     .main-container {
         flex-grow: 1;
         display: flex;
