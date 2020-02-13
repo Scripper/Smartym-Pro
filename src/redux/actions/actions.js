@@ -12,3 +12,10 @@ export const USER_AMOUNT = (amount) => {
         payload: amount
     }
 };
+
+export const MUTATE_USER = (newData) => {
+    return {
+        type: "MUTATE_USER",
+        payload: newData
+    }
+};

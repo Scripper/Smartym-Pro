@@ -20,6 +20,7 @@ class UserList extends Component {
                 if(item.email.toLowerCase().search(reg) >= 0) {
                     return true
                 }
+                return false
             })
         } else {
             result = initData;
@@ -28,7 +29,6 @@ class UserList extends Component {
         return result
         
     }
-
     render() {
         const data = this.getSortData();
         return (

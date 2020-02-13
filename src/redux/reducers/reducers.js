@@ -4,6 +4,8 @@ const initialStore = {
     userList: fakeData,
     searchValue: '',
     userAmount: 0,
+    popUpVisible: true,
+    popUpDataId: 5,
 };
 
 const reducer = (state = initialStore, action) => {
@@ -14,6 +16,9 @@ const reducer = (state = initialStore, action) => {
         case 'USER_AMOUNT':
             return { ...state, userAmount: action.payload };    
        
+        case 'MUTATE_USER':
+            return { ...state, userAmount: action.payload }; 
+
         default:
             return state;
     }

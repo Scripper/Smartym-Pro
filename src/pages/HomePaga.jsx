@@ -10,7 +10,6 @@ const HomePage = () => {
         <>
         <UserPopUp/>
         <div className='page-container'>
-            
             <LeftMenu/>
             <div className="main-container">
                 <Header/>
