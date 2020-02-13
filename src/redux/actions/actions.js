@@ -19,3 +19,16 @@ export const MUTATE_USER = (newData) => {
         payload: newData
     }
 };
+
+export const USER_ID = (userId) => {
+    return {
+        type: "USER_ID",
+        payload: userId
+    }
+};
+
+export const CLOSE_MODAL = () => {
+    return {
+        type: "CLOSE_MODAL",
+    }
+};

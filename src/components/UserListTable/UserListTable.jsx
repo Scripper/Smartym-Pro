@@ -7,7 +7,7 @@ const UserListTable = (props) => {
     const { data } = props;
     const userList = data.map(item => {
         return (
-        <tr key={item.id}>
+        <tr key={item.id} onClick={() => props.userId(item.id)}>
             <td>{item.email}</td>
             <td>{item.firstName} <span>{item.lastName}</span></td>
             <td><span>{item.type}</span></td>

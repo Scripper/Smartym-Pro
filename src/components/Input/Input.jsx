@@ -3,12 +3,12 @@ import './Input.scss';
 //import PropTypes from 'prop-types';
 
 
-const Input = ({ className, type, placeholder, onChange, id, value, defaultValue}) => {
+const Input = ({ className, type, placeholder, onChange, id, value, defaultValue, name}) => {
 
     const classes = `input-base ${ className }`;
 
     return (
-        <input type={type} className={ classes } placeholder={placeholder} onChange={onChange} id={id} value={value} defaultValue={defaultValue}/>
+        <input type={type} className={ classes } placeholder={placeholder} onChange={onChange} id={id} value={value} defaultValue={defaultValue} name={name}/>
     )
 };
 

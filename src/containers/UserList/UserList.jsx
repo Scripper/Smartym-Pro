@@ -3,7 +3,7 @@ import './UserList.scss';
 import UserListTable from '../../components/UserListTable/UserListTable';
 import Button from '../../components/Button/Button';
 import { connect } from "react-redux";
-import { USER_AMOUNT } from "../../redux/actions/actions";
+import { USER_AMOUNT, USER_ID } from "../../redux/actions/actions";
 
 
 class UserList extends Component {
@@ -29,15 +29,21 @@ class UserList extends Component {
         return result
         
     }
+
+    userId = (id) => {
+        this.props.setUserId(id)
+    }
+
     render() {
         const data = this.getSortData();
         return (
             <main className="user-list">
                 <UserListTable
                     data={data}
+                    userId={this.userId}
                 />
                 <div className="button-table">
-                    <Button value="show more" className="btn-table"/>
+                    {data.length > 10 ? <Button value="show more" className="btn-table"/> : null}
                 </div>
             </main>
         )
@@ -49,7 +55,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return { setUserAmount: (data) => dispatch(USER_AMOUNT(data)) }
+    return { setUserAmount: (data) => dispatch(USER_AMOUNT(data)),
+             setUserId: (data) => dispatch(USER_ID(data)) }
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserList);
